@@ -11,21 +11,35 @@
 
     <div class="container mt-5">
         <h2 class="text-center">Python Web Server</h2>
+
         <form action="/execute" method="post">
-              
             <div class="mb-3">
                 <label for="userInput" class="form-label">First Name:</label>
                 <input type="text" class="form-control" id="userInput" name="fname" required>
             </div>
-
             <div class="mb-3">
                 <label for="userInput" class="form-label">Last Name:</label>
                 <input type="text" class="form-control" id="userInput" name="lname" required>
             </div>
-
             <button type="submit" class="btn btn-primary">Submit</button>
-            
         </form>
+
+        <form action="/list" method="post">
+            <!-- <div class="mb-3">
+                <label for="userInput" class="form-label">First Name:</label>
+                <input type="text" class="form-control" id="userInput" name="fname" required>
+            </div>
+            <div class="mb-3">
+                <label for="userInput" class="form-label">Last Name:</label>
+                <input type="text" class="form-control" id="userInput" name="lname" required>
+            </div> -->
+            <button type="submit" class="btn btn-primary">Get PWD</button>
+        </form>
+        <form action="/dbx-job-list" method="post">
+            <button type="submit" class="btn btn-primary">Get dbx-job-list</button>
+        </form>
+
+        
     </div>
 
 </body>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLI Output</title>
+    <style>
+        body { font-family: monospace; background: black; color: lime; padding: 10px; }
+        #output { white-space: pre-wrap; }
+    </style>
+</head>
+<body>
+    <h2>CLI Output</h2>
+    <pre id="output"></pre>
+
+    <script>
+        const socket = new WebSocket("ws://localhost:8765");
+
+        socket.onmessage = function(event) {
+            document.getElementById("output").textContent += event.data;
+        };
+    </script>
+</body>
+</html>
