@@ -7,7 +7,7 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/execute', methods=['POST'])
+@app.route('/subprocess', methods=['POST'])
 def execute():
     def generate():
         process = subprocess.Popen(['ping', '-t', 'google.com'], stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
